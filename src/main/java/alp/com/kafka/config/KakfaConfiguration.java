@@ -43,12 +43,6 @@ public class KakfaConfiguration {
         return new KafkaTemplate<>(producerFactory());
     }
 
-    @Bean
-	public AdminClient getAdminClient() {
-		Properties properties = new Properties();
-		properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
-		AdminClient adminClient = AdminClient.create(properties);
-		return adminClient;
-	}
+    
 
 }
